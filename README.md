@@ -10,7 +10,7 @@ A few simple functions and several intelligent events
 
 for connecting to TCP Server use `Connect` method
 return boolean result for success in run
-```
+```csharp
 var socket = new ClientEventSocket();
 bool result = socket.Connect("127.0.0.1", 23);
 ```
@@ -18,14 +18,14 @@ bool result = socket.Connect("127.0.0.1", 23);
 
 for disconnecting from TCP Server use `Disonnect` method
 return boolean result for success in run
-```
+```csharp
 var socket = new ClientEventSocket();
 bool result = socket.Disonnect();
 ```
 
 for sending data to TCP Server use `Send` or `SendEof` method
 return boolean result for success in run
-```
+```csharp
 var socket = new ClientEventSocket();
 bool result = socket.Send("Simple");
 bool resultEof = socket.SendEof("Simple", ';');
@@ -35,7 +35,7 @@ bool resultEof = socket.SendEof("Simple", ';');
 
 Events occurred on every actions like OnConnected, OnDisconnected, OnSended, OnReceived, OnError
 
-```
+```csharp
 
         /// <summary>
         /// Event occurred on Connected to TCP Server.
